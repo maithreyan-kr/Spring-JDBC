@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd" xmlns:context="http://www.springframework.org/schema/context" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans">
+	<bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<constructor-arg name="url" value="jdbc:mysql://localhost:3306/mighty"></constructor-arg>
+		<constructor-arg name="username" value="maithreyan"></constructor-arg>
+		<constructor-arg name="password" value=""></constructor-arg>
+	</bean>
+	<!--<bean id="orgDao" class="com.maith.spjdbc.daoimpli.OrganisationDaoImpl">
+	<property name="dataSource" ref="ds"></property>
+	</bean>-->
+	<context:component-scan base-package="com.maith"/>
+	<context:component-scan base-package="com.maith.spjdbc"/>
+
+	  
+</beans>  
